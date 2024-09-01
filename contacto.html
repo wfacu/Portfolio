@@ -27,27 +27,29 @@
 </header>
 
     <main>
-    <h2><u>Currículum</u></h2>
-    <h3>Railcom S.R.L.:</h3>
-        <ul>
-            <li>Supervisor Comercial <i>(9/2023 - Presente)</i></li>
-            <li>Team Lead <i>(3/2023 - 8/2023)</i></li>
-            <li>Telemarketer & Asesor Comercial <i>(8/2022 - 2/2023)</i></li>
-        </ul>
-        <h3>Mostaza y Pan S.A.:</h3>
-        <ul>
-            <li>Empleado gastronómico <i>(11/2021 - 7/2022)</i></li>
-        </ul>
-        <a href="CV.pdf" download style="color: #7389c7;" alt="Descargar CV en formato PDF"><i class="fa-solid fa-cloud-arrow-down"> </i>Descargar CV</a>
+        <h2><u>Contacto</u></h2>
+        <form action="submit_form.php" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="mail">Correo Electrónico:</label><br>
+            <input type="email" id="mail" name="mail" required><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+            <button type="submit"><b>Enviar</b></button><br><br>
+        </form>
+        <p><i>O más bien, podés contactarme a través de mis redes sociales.</i></p>
     </main>
 
-    <footer>
-        <hr>
-        <center>
-        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 28px; color: #7389c7;" alt="Enlace a LinkedIn"></i></a>
-        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" style="font-size: 28px; color: #7389c7;" alt="Enlace GitHub"></i></a>
-        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" style="font-size: 28px; color: #7389c7;" alt="Enlace a WhatsApp"></i></a>
-        </center>
-    </footer>
+        <footer>
+            <hr>
+            <center>
+            <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 28px; color: #7389c7;" alt="Enlace a LinkedIn"></i></a>
+            <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" style="font-size: 28px; color: #7389c7;" alt="Enlace GitHub"></i></a>
+            <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" style="font-size: 28px; color: #7389c7;" alt="Enlace a WhatsApp"></i></a>
+            </center>
+        </footer>
 
 </html>
