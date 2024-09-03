@@ -4,50 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facundo Pall - Portfolio</title>
+    <title>Portfolio de Facundo Pall</title>
     <link rel="icon" href="https://i.ibb.co/802BHvK/163-1634065-master-ball-sprite-png-png-download-pokeball-pixel-removebg-preview-1.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/24f0b8b124.js" crossorigin="anonymous"></script>
 </head>
 
-<header>
-    <table align="right">
-        <td>
-            <a href="index.html"><button style="border-radius: 8px;" alt="Ir a Home"><i class="fa-solid fa-house"></i> <b>Home</b></button></a>
-            <a href="sobremi.html"><button style="border-radius: 8px;" alt="Ir a Sobre mí"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
-            <a href="curriculum.html"><button style="border-radius: 8px;" alt="Ir a Currículum"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a><br>
-            <a href="servicios.html"><button style="border-radius: 8px;" alt="Ir a Servicios"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
-            <a href="contacto.html"><button style="border-radius: 8px;" alt="Ir a Contacto"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
-        </td>
-    </table>
-    <center>
-        <h1>Facundo Pall - Portfolio</h1>
-    </center>
-    <hr>
-</header>
+<body>
+    <header>
+        <h1>¡Bienvenido a mi portfolio!</h1>
+            <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
+            <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
+            <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
+            <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
+            <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
+        <hr>
+    </header>
 
     <main>
-    <h2><u>Currículum</u></h2>
-    <h3>Railcom S.R.L.:</h3>
-        <ul>
-            <li>Supervisor Comercial <i>(9/2023 - Presente)</i></li>
-            <li>Team Lead <i>(3/2023 - 8/2023)</i></li>
-            <li>Telemarketer & Asesor Comercial <i>(8/2022 - 2/2023)</i></li>
-        </ul>
-        <h3>Mostaza y Pan S.A.:</h3>
-        <ul>
-            <li>Empleado gastronómico <i>(11/2021 - 7/2022)</i></li>
-        </ul>
-        <a href="CV.pdf" download style="color: #7389c7;" alt="Descargar CV en formato PDF"><i class="fa-solid fa-cloud-arrow-down"> </i>Descargar CV</a>
+        <h2>Currículum</h2>
+            <h3><summary>Railcom S.R.L.:</summary></h3>
+                <details>
+                    <div class="railcom-puestos">
+                        <li>Supervisor Comercial <i>(9/2023 - Presente)</i></li>
+                        <li>Team Lead <i>(3/2023 - 8/2023)</i></li>
+                        <li>Telemarketer & Asesor Comercial <i>(8/2022 - 2/2023)</i></li>
+                        <br>
+                        <img src="https://i.ibb.co/1mFsvxF/images.png" class="railcom">
+                    </div>
+                </details>
+
+            <h3><summary>Mostaza y Pan S.A.:</summary></h3>
+                <details>
+                    <div class="railcom-puestos">
+                        <li>Empleado gastronómico <i>(11/2021 - 7/2022)</i></li>
+                        <br>
+                        <img src="https://i.ibb.co/LpVW40f/images-1.png" class="mostaza">
+                    </div>
+                </details>
+
+        <br>
+        <center><a href="CV.pdf" download alt="Descargar CV en formato PDF" class="descargar-cv"><i class="fa-solid fa-cloud-arrow-down"> </i>Descargar CV</a></center>
     </main>
 
     <footer>
         <hr>
-        <center>
-        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 28px; color: #7389c7;" alt="Enlace a LinkedIn"></i></a>
-        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" style="font-size: 28px; color: #7389c7;" alt="Enlace GitHub"></i></a>
-        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" style="font-size: 28px; color: #7389c7;" alt="Enlace a WhatsApp"></i></a>
-        </center>
+        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin" alt="Enlace a LinkedIn"></i></a>
+        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" alt="Enlace GitHub"></i></a>
+        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" alt="Enlace a WhatsApp"></i></a>
     </footer>
-
+</body>
 </html>
