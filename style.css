@@ -30,6 +30,8 @@ footer {
     padding: 1px;
     text-align: center;
     font-size: 28px;
+    margin-top: 15px;
+    display: flexbox;
 }
 
 
