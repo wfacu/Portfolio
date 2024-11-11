@@ -53,6 +53,28 @@
                 ? '<i class="fa-solid fa-sun"></i> <b>Modo Claro</b>' 
                 : '<i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b>';
         });
+
+        document.querySelector('form').addEventListener('submit', (event) => {
+        const nombre = document.getElementById('nombre').value.trim();
+        const mail = document.getElementById('mail').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        if (!nombre || !mail || !mensaje) {
+            alert('Todos los campos son obligatorios.');
+            event.preventDefault();
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(mail)) {
+            alert('Por favor, ingresa un correo electrónico válido.');
+            event.preventDefault();
+            return;
+        }
+
+        alert('¡Su contacto ha sido enviado, le responderé apenas pueda!');
+        event.preventDefault();
+    });
     </script>
 
 </html>
