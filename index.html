@@ -13,11 +13,12 @@
 <body>
     <header>
         <h1>¡Bienvenido a mi portfolio!</h1>
-            <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
-            <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
-            <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
-            <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
-            <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
+        <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
+        <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
+        <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
+        <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
+        <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
+        <button id="toggle-dark-mode" class="boton"><i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b></button>
         <hr>
     </header>
 
@@ -25,7 +26,7 @@
         <table>
             <tr>
                 <td>
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGdn5nSKNtYcg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701912739088?e=1729728000&v=beta&t=E7__gRZJ87x0168RIjJdxasICV00KYhXf4tFXW5-acc" class="foto-de-perfil">
+                    <img src="foto_cv.jpeg" class="foto-de-perfil">
                 </td>
                 <td>
                     <p>Mi nombre es Facundo Pall, tengo 21 años, resido en la localidad de Balvanera en CABA y estudio Desarrollo de Software en UADE. Actualmente trabajo en el área comercial de una empresa dedicada a tercerizar la comercialización de productos bancarios y medios de pago.</p>
@@ -42,5 +43,14 @@
         <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" alt="Enlace a WhatsApp"></i></a>
     </footer>
 
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const button = document.getElementById('toggle-dark-mode');
+            button.innerHTML = document.body.classList.contains('dark-mode') 
+                ? '<i class="fa-solid fa-sun"></i> <b>Modo Claro</b>' 
+                : '<i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b>';
+        });
+    </script>
 </body>
 </html>

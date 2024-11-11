@@ -12,12 +12,13 @@
 
 
 <header>
-    <h1>¡Bienvenido a mi portfolio personal!</h1>
-        <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
-        <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
-        <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
-        <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
-        <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
+    <h1>¡Bienvenido a mi portfolio!</h1>
+    <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
+    <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
+    <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
+    <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
+    <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
+    <button id="toggle-dark-mode" class="boton"><i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b></button>
     <hr>
 </header>
 
@@ -34,5 +35,15 @@
             <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" alt="Enlace GitHub"></i></a>
             <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" alt="Enlace a WhatsApp"></i></a>
         </footer>
+
+        <script>
+            document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const button = document.getElementById('toggle-dark-mode');
+                button.innerHTML = document.body.classList.contains('dark-mode') 
+                    ? '<i class="fa-solid fa-sun"></i> <b>Modo Claro</b>' 
+                    : '<i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b>';
+            });
+        </script>
 
 </html>
