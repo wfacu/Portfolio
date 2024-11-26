@@ -4,53 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Facundo Pall</title>
-    <link rel="icon" href="https://i.ibb.co/802BHvK/163-1634065-master-ball-sprite-png-png-download-pokeball-pixel-removebg-preview-1.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Facundo Pall</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/24f0b8b124.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h1>¡Bienvenido a mi portfolio!</h1>
-        <a href="index.html"><button alt="Ir a Home" class="boton"><i class="fa-solid fa-house"></i> <b>Inicio</b></button></a>
-        <a href="sobremi.html"><button alt="Ir a Sobre mí" class="boton"><i class="fa-solid fa-user"></i> <b>Sobre mí</b></button></a>
-        <a href="curriculum.html"><button alt="Ir a Currículum" class="boton"><i class="fa-solid fa-file"></i> <b>Currículum</b></button></a>
-        <a href="servicios.html"><button alt="Ir a Servicios" class="boton"><i class="fa-solid fa-list-check"></i> <b>Servicios</b></button></a>
-        <a href="contacto.html"><button alt="Ir a Contacto" class="boton"><i class="fa-solid fa-phone"></i> <b>Contacto</b></button></a>
-        <button id="toggle-dark-mode" class="boton"><i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b></button>
-        <hr>
+        <h1 class="title">FACUNDO PALL</h1>
+        <nav class="nav-bar">
+            <div class="header-buttons">
+                <button class="btn-header"><a href="#home">Home</a></button>
+                <button class="btn-header"><a href="#about">About</a></button>
+                <button class="btn-header"><a href="#projects">Projects</a></button>
+                <button class="btn-header"><a href="#contact">Contact</a></button>
+            </div>
+            <div class="language-selector">
+                <button id="language-button">
+                    <img src="./imgs/english.png" class="flag" alt="English Flag"> EN <span class="arrow">▼</span>
+                </button>
+                <div class="language-options">
+                    <div class="language-option" data-lang="en">
+                        <img src="./imgs/english.png" class="flag" alt="English Flag"> EN
+                    </div>
+                    <div class="language-option" data-lang="es">
+                        <img src="./imgs/español.png" class="flag" alt="Spanish Flag"> ES
+                    </div>
+                </div>
+            </div>
+            <div class="toggle-switch day" id="toggleSwitch">
+                <div class="switch"></div>
+                <div class="cloud">☁️</div>
+                <div class="sun">☀️</div>
+                <div class="moon">🌙</div>
+                <div class="stars">✨</div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <table>
-            <tr>
-                <td>
-                    <img src="foto_cv.jpeg" class="foto-de-perfil">
-                </td>
-                <td>
-                    <p>Mi nombre es Facundo Pall, tengo 21 años, resido en la localidad de Balvanera en CABA y estudio Desarrollo de Software en UADE. Actualmente trabajo en el área comercial de una empresa dedicada a tercerizar la comercialización de productos bancarios y medios de pago.</p>
-                    <p>Los aspectos más relevantes de mi experiencia y mis logros consisten en la informática y el hardware, particularmente el armado de PCs y Arduino.</p>
-                    <p>Me considero un programador junior que ofrece soluciones tecnológicas muy básicas.</p>
-                </td>
-            </tr>
-        </table>
+        <div class="main-container">
+            <div class="home-container">
+                <div class="home-text">
+                    <div class="typing-container">
+                        <h1 class="home-title">Facundo Pall</h1>
+                        <p class="home-subtitle">Software Engineer Jr.</p>
+                    </div>
+                    <p class="home-description">Descripción sobre ti o el tema de la página.</p>
+                </div>
+                <div class="home-image">
+                    <img src="./imgs/foto-perfil.png" alt="Foto Memoji" />
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <hr>
-        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin" alt="Enlace a LinkedIn"></i></a>
-        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-square-github" alt="Enlace GitHub"></i></a>
-        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-square-whatsapp" alt="Enlace a WhatsApp"></i></a>
-    </footer>
 
-    <script>
-        document.getElementById('toggle-dark-mode').addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const button = document.getElementById('toggle-dark-mode');
-            button.innerHTML = document.body.classList.contains('dark-mode') 
-                ? '<i class="fa-solid fa-sun"></i> <b>Modo Claro</b>' 
-                : '<i class="fa-solid fa-moon"></i> <b>Modo Oscuro</b>';
-        });
-    </script>
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin-in" alt="Enlace a LinkedIn"></i></a>
+        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-github" alt="Enlace GitHub"></i></a>
+        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-whatsapp" alt="Enlace a WhatsApp"></i></a>
+    </div>
+
+    <script src="./scripts.js"></script>
 </body>
+
 </html>
