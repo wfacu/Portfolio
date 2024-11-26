@@ -4,59 +4,75 @@ const languageOptions = document.querySelectorAll('.language-option');
 const languageSelector = document.querySelector('.language-selector');
 const languageMenu = languageSelector.querySelector('.language-options');
 
-// Evento para seleccionar un idioma
-languageOptions.forEach(option => {
-    option.addEventListener('click', () => {
-        // Extrae el idioma seleccionado
-        const selectedLang = option.innerHTML;
-
-        // Actualiza el contenido del botón con el idioma seleccionado
-        languageButton.innerHTML = `${selectedLang} <span class="arrow">▼</span>`;
-
-        // Cambia dinámicamente el contenido si fuera necesario
-        const langCode = option.dataset.lang;
-        switchLanguage(langCode);
-
-        // Guarda el idioma seleccionado en localStorage
-        localStorage.setItem('selectedLanguage', langCode);
-
-        // Oculta las opciones del menú al seleccionar un idioma
-        languageMenu.classList.remove('visible');
-    });
-});
-
+// Función para cambiar dinámicamente el contenido según el idioma seleccionado
 // Función para cambiar dinámicamente el contenido según el idioma seleccionado
 function switchLanguage(langCode) {
-    // Cambia el contenido de la página según el idioma seleccionado
+    const translations = {
+        es: {
+            description: "Soy un joven profesional, estudiante y apasionado por la programación y el desarrollo de soluciones tecnológicas. En este portafolio vas a poder conocerme mejor, ver más sobre mi trabajo, mi progreso y mi proyección a futuro en esta gran industria.",
+            subtitle: "Desarrollador de Software Jr.",
+            home: "Inicio",
+            about: "Acerca de",
+            projects: "Proyectos",
+            contact: "Contacto"
+        },
+        en: {
+            description: "I'm a young professional, a student and a passionate about programming and the development of tech solutions. In this portfolio, you'll be able to get to know me better, see more about my work, my progress and my future projection in this great industry.",
+            subtitle: "Software Developer Jr.",
+            home: "Home",
+            about: "About",
+            projects: "Projects",
+            contact: "Contact"
+        },
+    };
+
     const elements = {
         description: document.querySelector('.home-description'),
         subtitle: document.querySelector('.home-subtitle'),
-    };
-
-    const translations = {
-        es: {
-            description: "Una breve descripción sobre ti o el tema de la página.",
-            subtitle: "Ingeniero de Software Jr.",
-        },
-        en: {
-            description: "A brief description about yourself or the page's theme.",
-            subtitle: "Software Engineer Jr.",
-        },
+        home: document.getElementById('home-link'),
+        about: document.getElementById('about-link'),
+        projects: document.getElementById('projects-link'),
+        contact: document.getElementById('contact-link')
     };
 
     if (translations[langCode]) {
         elements.description.textContent = translations[langCode].description;
         elements.subtitle.textContent = translations[langCode].subtitle;
+        elements.home.textContent = translations[langCode].home;
+        elements.about.textContent = translations[langCode].about;
+        elements.projects.textContent = translations[langCode].projects;
+        elements.contact.textContent = translations[langCode].contact;
     }
 }
 
-// Mostrar las opciones al hacer clic en el botón
+// Evento para seleccionar un idioma
+languageOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const selectedLang = option.innerHTML;
+        const langCode = option.dataset.lang;
+
+        // Actualiza el contenido del botón con el idioma seleccionado
+        languageButton.innerHTML = `${selectedLang} <span class="arrow">▼</span>`;
+
+        // Cambia el idioma de la página
+        switchLanguage(langCode);
+
+        // Guarda el idioma en localStorage
+        localStorage.setItem('selectedLanguage', langCode);
+
+        // Oculta el menú de opciones
+        languageMenu.classList.remove('visible');
+    });
+});
+
+
+// Mostrar el menú de opciones al hacer clic en el botón
 languageButton.addEventListener('click', (event) => {
-    event.stopPropagation(); // Evita que se cierre el menú al hacer clic en el botón
+    event.stopPropagation();
     languageMenu.classList.toggle('visible');
 });
 
-// Ocultar el menú cuando se hace clic fuera del selector
+// Ocultar el menú si se hace clic fuera del selector de idioma
 document.addEventListener('click', (event) => {
     if (!languageSelector.contains(event.target)) {
         languageMenu.classList.remove('visible');
@@ -71,37 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedOption.click(); // Simula un clic en el idioma guardado
     }
 });
-const darkModeSwitch = document.getElementById('dark-mode-switch');
-const circle = document.querySelector('.switch-label .circle');
+// Referencias a los elementos en el DOM
+const themeToggleButton = document.getElementById('theme-toggle');
+const sunIcon = document.getElementById('icon-sun');
+const moonIcon = document.getElementById('icon-moon');
 
-// Comprobar si el tema oscuro está activado al cargar la página
-if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    darkModeSwitch.checked = true;
-    circle.style.left = 'calc(100% - 20px)'; // Mueve el círculo a la derecha
+// Función para actualizar el tema
+function updateTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme); // Guarda la preferencia en el localStorage
 }
 
-// Cambiar el tema al cambiar el estado del switch
-const toggleSwitch = document.getElementById('toggleSwitch');
-const body = document.body;
+// Cargar la preferencia de tema guardada (si existe)
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    updateTheme(savedTheme); // Si hay preferencia guardada, la carga
+});
 
-// Asegurarse de que el modo oscuro esté guardado en localStorage y se aplique al cargar la página
-if (localStorage.getItem('darkMode') === 'enabled') {
-    toggleSwitch.classList.remove('day');
-    toggleSwitch.classList.add('night');
-    body.style.backgroundColor = '#2C3E50';
-}
-
-toggleSwitch.addEventListener('click', function() {
-    if (toggleSwitch.classList.contains('day')) {
-        toggleSwitch.classList.remove('day');
-        toggleSwitch.classList.add('night');
-        body.style.backgroundColor = '#2C3E50';
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
-        toggleSwitch.classList.remove('night');
-        toggleSwitch.classList.add('day');
-        body.style.backgroundColor = '#f0f8ff';
-        localStorage.setItem('darkMode', 'disabled');
-    }
+// Evento para cambiar entre los temas
+themeToggleButton.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    updateTheme(newTheme);
 });

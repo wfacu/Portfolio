@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Facundo Pall</title>
+    <link rel="icon" type="image/png" href="./imgs/favicon.png">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/24f0b8b124.js" crossorigin="anonymous"></script>
@@ -15,33 +16,31 @@
         <h1 class="title">FACUNDO PALL</h1>
         <nav class="nav-bar">
             <div class="header-buttons">
-                <button class="btn-header"><a href="#home">Home</a></button>
-                <button class="btn-header"><a href="#about">About</a></button>
-                <button class="btn-header"><a href="#projects">Projects</a></button>
-                <button class="btn-header"><a href="#contact">Contact</a></button>
-            </div>
-            <div class="language-selector">
-                <button id="language-button">
-                    <img src="./imgs/english.png" class="flag" alt="English Flag"> EN <span class="arrow">▼</span>
-                </button>
-                <div class="language-options">
-                    <div class="language-option" data-lang="en">
-                        <img src="./imgs/english.png" class="flag" alt="English Flag"> EN
-                    </div>
-                    <div class="language-option" data-lang="es">
-                        <img src="./imgs/español.png" class="flag" alt="Spanish Flag"> ES
-                    </div>
-                </div>
-            </div>
-            <div class="toggle-switch day" id="toggleSwitch">
-                <div class="switch"></div>
-                <div class="cloud">☁️</div>
-                <div class="sun">☀️</div>
-                <div class="moon">🌙</div>
-                <div class="stars">✨</div>
+                <a class="btn-header" href="#home" id="home-link"</a>
+                <a class="btn-header" href="#about" id="about-link"></a>
+                <a class="btn-header" href="#projects" id="projects-link"></a>
+                <a class="btn-header" href="#contact" id="contact-link"></a>
             </div>
         </nav>
+        <button id="theme-toggle">
+            <i id="icon-sun" class="fa-solid fa-sun"></i>
+            <i id="icon-moon" class="fa-solid fa-moon"></i>
+        </button>
+        <div class="language-selector">
+            <button id="language-button">
+                <img src="./imgs/english.png" class="flag" alt="English Flag"> EN <span class="arrow">▼</span>
+            </button>
+            <div class="language-options">
+                <div class="language-option" data-lang="en">
+                    <img src="./imgs/english.png" class="flag" alt="English Flag"> EN
+                </div>
+                <div class="language-option" data-lang="es">
+                    <img src="./imgs/español.png" class="flag" alt="Spanish Flag"> ES
+                </div>
+            </div>
+        </div>
     </header>
+    
 
     <main>
         <div class="main-container">
@@ -51,7 +50,11 @@
                         <h1 class="home-title">Facundo Pall</h1>
                         <p class="home-subtitle">Software Engineer Jr.</p>
                     </div>
-                    <p class="home-description">Descripción sobre ti o el tema de la página.</p>
+                    <p class="home-description"></p>
+                    <!-- Botón debajo del párrafo -->
+                    <a href="./docs/CV.pdf" target="_blank" download class="curriculum-button">
+                        <i class="fa-solid fa-arrow-down-long"></i> <span>CV</span>
+                    </a>                                  
                 </div>
                 <div class="home-image">
                     <img src="./imgs/foto-perfil.png" alt="Foto Memoji" />
@@ -59,6 +62,7 @@
             </div>
         </div>
     </main>
+    
 
     <div class="social-media">
         <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin-in" alt="Enlace a LinkedIn"></i></a>
@@ -66,7 +70,6 @@
         <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-whatsapp" alt="Enlace a WhatsApp"></i></a>
     </div>
 
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" defer></script>
 </body>
-
 </html>

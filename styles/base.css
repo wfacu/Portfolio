@@ -1,0 +1,75 @@
+/* Variables Globales */
+:root {
+    --color-fg: #252525;  /* Color principal de texto */
+    --color-bg: #f0f0f0;  /* Fondo claro */
+    --gradient-bg: linear-gradient(to right, #b8b8b8 0%, #f0f0f0 50%, #587caf 100%);
+    --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --global-transition-time: 0.3s;
+}
+
+/* Reset y Tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html, body {
+    height: 100%;
+    background: var(--gradient-bg);
+    color: var(--color-fg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Botones globales */
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+/* Clases utilitarias */
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+/* Fuentes externas */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
