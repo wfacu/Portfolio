@@ -1,0 +1,21 @@
+/* Social media buttons */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 36px;
+    margin: 20px 20px;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+}

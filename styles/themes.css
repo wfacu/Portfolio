@@ -1,0 +1,51 @@
+[data-theme="light"] {
+    --color-fg: #252525;
+    --color-bg: #f0f0f0; 
+    --gradient-bg: linear-gradient(to right, #b8b8b8 0%, #f0f0f0 50%, #587caf 100%);
+}
+
+[data-theme="dark"] {
+    --color-fg: #f0f0f0;
+    --color-bg: #252525;
+    --gradient-bg: linear-gradient(to right, #252525 0%, #2f3c52 50%, #587caf 100%);
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--color-fg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s ease;
+}
+
+#theme-toggle i {
+    position: absolute;
+    opacity: 0;
+    font-size: 2rem;
+    transition: opacity 0.5s ease;
+}
+
+[data-theme="light"] #icon-sun {
+    opacity: 1;
+    color: var(--color-fg);
+}
+
+[data-theme="dark"] #icon-moon {
+    opacity: 1;
+}
+
+[data-theme="dark"] #icon-sun {
+    opacity: 0;
+}
+
+/* La luna se oculta en el tema claro */
+[data-theme="light"] #icon-moon {
+    opacity: 0;
+}

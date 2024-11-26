@@ -1,0 +1,174 @@
+/* ESTILOS GENERALES DEL HEADER */
+
+/* Header buttons */
+.header-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease;
+    border-radius: 14px;
+    margin-left: 20px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.header-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22222260;
+    transition: all 0.5s ease;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.header-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header-btn a {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Language button */
+#language-btn {
+    cursor: pointer;
+    background: transparent;
+    border: 4px solid var(--color-fg);
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#language-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flag {
+    width: 28px;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.arrow {
+    margin-left: 10px;
+    transition: transform 0.50s ease-in-out;
+    color: var(--color-fg);
+}
+
+#language-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+.language-options {
+    display: none;
+    position: absolute;
+    background-color: var(--color-fg);
+    border-radius: 8px;
+    padding: 12px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.50s ease;
+    transform: translateY(10px);
+}
+
+.language-options span {
+    color: var(--color-bg);
+}
+
+.language-options.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.language-option {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.50s ease, padding-left 0.50s ease;
+    border-radius: 6px;
+}
+
+.language-option:hover {
+    background-color: var(--color-fg);
+    padding-left: 30px;
+}
+
+/* Curriculum button */
+.curriculum-button {
+    margin-top: 50px;
+    background-color: var(--color-fg);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--color-bg);
+}
+
+.curriculum-button:hover {
+    background: var(--gradient-bg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+.curriculum-button i {
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    color: var(--color-bg);
+}
+
+.curriculum-button:hover i {
+    color: var(--color-fg);
+    transform: scale(1.4);
+}
+
+.curriculum-button span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    color: var(--color-bg);
+}
+
+.curriculum-button:hover span {
+    color: var(--color-fg);
+    transform: scale(1.2);
+}

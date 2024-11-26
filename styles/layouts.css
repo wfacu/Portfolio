@@ -1,0 +1,72 @@
+/* CONTENEDORES DE LA P'AGINA */
+
+/* Home */
+.home-title, .home-subtitle {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.home-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: cover;
+    max-width: 1200px;
+    background-color: #0000004d;
+    border-radius: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 0px 20px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.typing-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Titulo */
+.home-title {
+    font-size: 74px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    animation: typing-title 2s steps(120) 1s forwards;
+}
+
+/* Subtítulo */
+.home-subtitle {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    animation: typing-subtitle 3s steps(90) 0.5s forwards;
+}
+
+.home-description {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.home-image img {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

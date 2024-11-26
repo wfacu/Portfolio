@@ -1,5 +1,5 @@
 // Elementos de la interfaz relacionados con el selector de idioma
-const languageButton = document.getElementById('language-button');
+const languageButton = document.getElementById('language-btn');
 const languageOptions = document.querySelectorAll('.language-option');
 const languageSelector = document.querySelector('.language-selector');
 const languageMenu = languageSelector.querySelector('.language-options');
