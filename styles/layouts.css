@@ -44,7 +44,6 @@
     font-size: 74px;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     animation: typing-title 2s steps(120) 1s forwards;
 }
 
@@ -53,7 +52,6 @@
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     animation: typing-subtitle 3s steps(90) 0.5s forwards;
 }
 

@@ -2,7 +2,7 @@
 
 * {
     color: var(--color-fg);
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* HEADER */
@@ -22,7 +22,6 @@ header {
     font-size: 54px;
     white-space: nowrap;
     overflow: visible;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .nav-bar {

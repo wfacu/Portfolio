@@ -68,16 +68,6 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.arrow {
-    margin-left: 10px;
-    transition: transform 0.50s ease-in-out;
-    color: var(--color-fg);
-}
-
-#language-btn:hover .arrow {
-    transform: translateX(5px);
-}
-
 .language-options {
     display: none;
     position: absolute;
@@ -160,9 +150,8 @@
 }
 
 .curriculum-button span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     transition: color 0.3s ease-in-out;
     color: var(--color-bg);
 }
