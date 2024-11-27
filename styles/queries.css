@@ -5,11 +5,11 @@
     }
 
     .home-title {
-        font-size: 10vw;
+        font-size: 12vw;
     }
 
     .home-subtitle {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .home-container {
@@ -20,6 +20,10 @@
 
     .home-text {
         text-align: center;
+    }
+
+    .home-description {
+        font-size: 4vw;
     }
 
     .home-image img {
@@ -43,6 +47,7 @@
 
     .header-btn {
         font-size: 1.1rem; /* Usar rem para tamaños de fuente más responsivos */
+        display: none;
     }
 
     .social-media {
@@ -61,5 +66,17 @@
     .social-media a:hover {
         transform: scale(1.1); /* Efecto de hover más pronunciado */
         transition: transform 0.3s ease; /* Transición más rápida */
+    }
+
+    #theme-toggle i {
+        position: absolute;
+        opacity: 0;
+        font-size: 6vw;
+        transition: opacity 0.5s ease;
+    }
+    
+    #language-btn {
+        padding: 8px 16px; /* Ajuste de padding más pequeño */
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
     }
 }
