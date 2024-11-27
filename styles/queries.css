@@ -1,20 +1,19 @@
 /* Para pantallas medianas y pequeñas (tabletas y pantallas medianas) */
 @media (max-width: 1400px) {
     .title {
-        font-size: 40px;
+        font-size: 4vw; /* Ajuste con vw para que se adapte al tamaño de la pantalla */
     }
 
     .home-title {
-        font-size: 60px;
+        font-size: 10vw;
     }
 
     .home-subtitle {
-        font-size: 20px;
+        font-size: 4vw;
     }
 
     .home-container {
         flex-direction: column;
-        padding: 20px 10px 0px 10px;
         justify-content: center;
         align-items: center; /* Centrado horizontal dentro del contenedor */
     }
@@ -33,7 +32,7 @@
         display: flex; /* Usar flexbox para centrar los elementos */
         justify-content: center; /* Centrado horizontal */
         align-items: center; /* Centrado vertical */
-        padding: 10px;
+        padding: 5vh 10vw 5vh 10vw; /* Ajuste con vw y vh para un padding más flexible */
     }
 
     /* CENTRAR EL BOTÓN DE CURRICULUM */
@@ -43,7 +42,7 @@
     }
 
     .header-btn {
-        font-size: 18px;
+        font-size: 1.1rem; /* Usar rem para tamaños de fuente más responsivos */
     }
 
     .social-media {
@@ -52,15 +51,15 @@
         transform: translateX(-50%); /* Centrado perfecto */
         display: flex;
         flex-direction: row; /* Los íconos en fila */
-        margin-top: 100%
+        margin-top: 3vh; /* Ajuste más razonable para la distancia */
     }
 
     .social-media a {
-        font-size: 28px;
+        font-size: 2rem; /* Tamaño de fuente ajustable */
     }
 
     .social-media a:hover {
-        transform: scale(1.01); /* Efecto de hover */
-        transition: transform 1s ease;
+        transform: scale(1.1); /* Efecto de hover más pronunciado */
+        transition: transform 0.3s ease; /* Transición más rápida */
     }
 }

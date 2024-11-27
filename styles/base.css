@@ -13,8 +13,12 @@ header {
     align-items: center;
     padding: 20px;
     position: fixed;
-    width: 100%;
-    box-sizing: border-box;
+    top: 0; /* Asegura que esté fijo en la parte superior */
+    left: 0; /* Asegura que se alinee con el lado izquierdo de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    background: var(--gradient-bg); /* Fondo con gradiente o color */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
 .title {
