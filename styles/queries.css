@@ -47,12 +47,12 @@
     }
 
     .social-media {
+        position: relative;
         left: 50%; /* Centrado horizontal */
         transform: translateX(-50%); /* Centrado perfecto */
         display: flex;
         flex-direction: row; /* Los íconos en fila */
-        min-height: 80vh;
-        margin-top: 93vh;
+        margin-top: 100%
     }
 
     .social-media a {
