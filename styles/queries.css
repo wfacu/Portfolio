@@ -1,7 +1,7 @@
 /* Para pantallas medianas y pequeñas (tabletas y pantallas medianas) */
 @media (max-width: 1400px) {
     .title {
-        font-size: 4vw; /* Ajuste con vw para que se adapte al tamaño de la pantalla */
+        font-size: 5vw; /* Ajuste con vw para que se adapte al tamaño de la pantalla */
     }
 
     .home-title {
@@ -36,7 +36,7 @@
         display: flex; /* Usar flexbox para centrar los elementos */
         justify-content: center; /* Centrado horizontal */
         align-items: center; /* Centrado vertical */
-        padding: 5vh 10vw 5vh 10vw; /* Ajuste con vw y vh para un padding más flexible */
+        padding: 10vw 10vw 0 10vw; /* Ajuste con vw y vh para un padding más flexible */
     }
 
     /* CENTRAR EL BOTÓN DE CURRICULUM */
@@ -56,7 +56,6 @@
         transform: translateX(-50%); /* Centrado perfecto */
         display: flex;
         flex-direction: row; /* Los íconos en fila */
-        margin-top: 3vh; /* Ajuste más razonable para la distancia */
     }
 
     .social-media a {
