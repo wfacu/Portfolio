@@ -9,7 +9,7 @@
     }
 
     .home-subtitle {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .home-container {
@@ -36,7 +36,7 @@
         display: flex; /* Usar flexbox para centrar los elementos */
         justify-content: center; /* Centrado horizontal */
         align-items: center; /* Centrado vertical */
-        padding: 10vw 10vw 0 10vw; /* Ajuste con vw y vh para un padding más flexible */
+        padding: 67vw 5vw 55vw 5vw; /* Ajuste con vw y vh para un padding más flexible */
     }
 
     /* CENTRAR EL BOTÓN DE CURRICULUM */
@@ -50,12 +50,14 @@
         display: none;
     }
 
+    /* SOCIAL MEDIA CENTRADO */
     .social-media {
         position: relative;
         left: 50%; /* Centrado horizontal */
         transform: translateX(-50%); /* Centrado perfecto */
         display: flex;
         flex-direction: row; /* Los íconos en fila */
+        background: var(--gradient-bg); /* Fondo con gradiente o color */
     }
 
     .social-media a {
@@ -67,15 +69,84 @@
         transition: transform 0.3s ease; /* Transición más rápida */
     }
 
-    #theme-toggle i {
-        position: absolute;
-        opacity: 0;
-        font-size: 6vw;
+    /* #theme-toggle Icono */
+    #theme-toggle {
+        display: flex;
+        justify-content: center; /* Centra el icono */
+        align-items: center; /* Centrado vertical */
         transition: opacity 0.5s ease;
     }
-    
+
+    #theme-toggle i {
+        font-size: 4vw;
+    }
+
+    /* Botón de idioma */
     #language-btn {
-        padding: 8px 16px; /* Ajuste de padding más pequeño */
-        font-size: 1rem; /* Tamaño de fuente más pequeño */
+        display: inline-flex;  /* Usamos inline-flex para que el tamaño se ajuste al contenido */
+        position: relative;
+        font-size: min(2vw, 1.5rem); /* Ajuste dinámico del tamaño de fuente */
+        width: auto; /* El ancho del botón se ajusta al contenido */
+        min-width: 120px; /* Establece un mínimo de ancho para que no se haga demasiado pequeño */
+        justify-content: center; /* Centrado del texto dentro del botón */
+        align-items: center; /* Centrado vertical */
+        margin-left: 20px; /* Espacio entre el botón y los elementos adyacentes */
+        flex-shrink: 0; /* Evita que el botón se reduzca demasiado */
+    }
+
+    .language-text {
+        font-size: min(2vw, 1.2rem); /* Ajusta el tamaño de la fuente para texto dentro del botón */
+    }
+
+    /* Contenedor de header con theme toggle y language btn */
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Distribuir espacio entre los elementos */
+        align-items: center;
+        width: 100%;
+        padding: 0 20px; /* Añadir algo de padding para no estar pegado a los bordes */
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en filas */
+    }
+
+    /* Asegurarse de que los elementos no se sobrepongan y estén bien alineados */
+    #theme-toggle, .title, #language-btn {
+        margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
+    }
+    
+    /* Respuesta para mejorar la adaptabilidad en pantallas muy pequeñas */
+    @media (max-width: 600px) {
+        .header-btn, #theme-toggle, #language-btn {
+            margin-bottom: 10px; /* Espacio entre los elementos cuando están en columna */
+        }
+
+        #theme-toggle i {
+            font-size: 6vw; /* Ajuste del tamaño del icono para pantallas más pequeñas */
+            left: 1vw;
+        }
+
+        .language-text {
+            font-size: 3vw; /* Ajuste para mejorar legibilidad en pantallas pequeñas */
+        }
+
+        .flag {
+            width: 4vw;
+            height: 3vw;
+            right: 1vw;
+        }
+
+        /* Ajustar el botón de idioma en pantallas pequeñas */
+        #language-btn {
+            min-width: 80px; /* Ajusta el mínimo ancho para que el botón no se quede fuera */
+            margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+            width: 80%; /* Hace que el botón ocupe el 60% de su contenedor */
+            justify-content: center; /* Centrado horizontal */
+            align-items: center; /* Centrado vertical */
+            font-size: 4vw; /* Ajusta el tamaño del texto dentro del botón */
+        }
+
+        .header-container {
+            flex-direction: column; /* Cambia a columna cuando la pantalla es muy pequeña */
+            align-items: center; /* Alinea todo al centro */
+        }
     }
 }
