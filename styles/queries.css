@@ -82,7 +82,7 @@
 
     #language-btn {
         font-size: 16px; /* Ajuste de tamaño de fuente */
-        padding: 10px 20px; /* Menos padding en pantallas más pequeñas */
+        padding: 10px 25px; /* Menos padding en pantallas más pequeñas */
         min-width: 100px; /* Reducir el ancho mínimo en pantallas pequeñas */
         max-width: 180px; /* Limitar el tamaño máximo en pantallas medianas */
         width: 80%; /* El botón ocupa un 80% de su contenedor */

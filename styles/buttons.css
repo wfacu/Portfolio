@@ -97,13 +97,10 @@
 
 /* Opciones de idioma */
 .language-option {
-    padding: 12px 24px;
+    padding: 12px 0px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 500;
-    text-align: left;
     display: flex;
-    align-items: center;
     gap: 15px;
     transition: background-color 0.50s ease, padding-left 0.50s ease;
     border-radius: 6px;
@@ -112,7 +109,7 @@
 /* Efecto hover sobre las opciones */
 .language-option:hover {
     background-color: var(--color-bg);
-    padding-left: 20px;
+    padding-left: 5px;
 }
 
 /* Cambiar el color del texto cuando se hace hover sobre la opción */
