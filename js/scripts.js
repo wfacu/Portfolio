@@ -52,7 +52,7 @@ languageOptions.forEach(option => {
         const langCode = option.dataset.lang;
 
         // Actualiza el contenido del botón con el idioma seleccionado
-        languageButton.innerHTML = `${selectedLang} <span class="arrow">▼</span>`;
+        languageButton.innerHTML = `${selectedLang}`;
 
         // Cambia el idioma de la página
         switchLanguage(langCode);

@@ -1,5 +1,5 @@
 /* Para pantallas medianas y pequeñas (tabletas y pantallas medianas) */
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     .title {
         font-size: 5vw; /* Ajuste con vw para que se adapte al tamaño de la pantalla */
     }
@@ -53,11 +53,8 @@
     /* SOCIAL MEDIA CENTRADO */
     .social-media {
         position: relative;
-        left: 50%; /* Centrado horizontal */
-        transform: translateX(-50%); /* Centrado perfecto */
         display: flex;
         flex-direction: row; /* Los íconos en fila */
-        background: var(--gradient-bg); /* Fondo con gradiente o color */
     }
 
     .social-media a {
@@ -75,73 +72,65 @@
         justify-content: center; /* Centra el icono */
         align-items: center; /* Centrado vertical */
         transition: opacity 0.5s ease;
+        margin: 0 20px; /* Añadido margen horizontal para separación */
     }
 
     #theme-toggle i {
         font-size: 4vw;
     }
 
-    /* Botón de idioma */
     #language-btn {
-        display: inline-flex;  /* Usamos inline-flex para que el tamaño se ajuste al contenido */
-        position: relative;
-        font-size: min(2vw, 1.5rem); /* Ajuste dinámico del tamaño de fuente */
-        width: auto; /* El ancho del botón se ajusta al contenido */
-        min-width: 120px; /* Establece un mínimo de ancho para que no se haga demasiado pequeño */
-        justify-content: center; /* Centrado del texto dentro del botón */
-        align-items: center; /* Centrado vertical */
-        margin-left: 20px; /* Espacio entre el botón y los elementos adyacentes */
-        flex-shrink: 0; /* Evita que el botón se reduzca demasiado */
+        font-size: 16px; /* Ajuste de tamaño de fuente */
+        padding: 10px 20px; /* Menos padding en pantallas más pequeñas */
+        min-width: 100px; /* Reducir el ancho mínimo en pantallas pequeñas */
+        max-width: 180px; /* Limitar el tamaño máximo en pantallas medianas */
+        width: 80%; /* El botón ocupa un 80% de su contenedor */
     }
 
     .language-text {
-        font-size: min(2vw, 1.2rem); /* Ajusta el tamaño de la fuente para texto dentro del botón */
+        font-size: min(2vw, 1.2rem); /* Ajusta el tamaño del texto dentro del botón */
     }
 
     /* Contenedor de header con theme toggle y language btn */
     .header-container {
         display: flex;
-        justify-content: space-between; /* Distribuir espacio entre los elementos */
-        align-items: center;
+        justify-content: flex-start; /* Distribuir los elementos al principio */
+        align-items: center; /* Alinea todos los elementos verticalmente al centro */
         width: 100%;
         padding: 0 20px; /* Añadir algo de padding para no estar pegado a los bordes */
-        flex-wrap: wrap; /* Permite que los elementos se ajusten en filas */
+        flex-wrap: nowrap; /* No permitir que los elementos se envuelvan */
     }
 
     /* Asegurarse de que los elementos no se sobrepongan y estén bien alineados */
-    #theme-toggle, .title, #language-btn {
-        margin-bottom: 10px; /* Espacio entre los elementos en pantallas pequeñas */
+    .header-container > * {
+        margin-bottom: 0; /* Eliminar márgenes inferiores para que se alineen correctamente */
     }
-    
+
+    .header-container .title {
+        margin-right: 20px; /* Separar el título del theme toggle */
+    }
+
+    .header-container #theme-toggle {
+        margin-right: 20px; /* Separar el theme toggle del language btn */
+    }
+
     /* Respuesta para mejorar la adaptabilidad en pantallas muy pequeñas */
-    @media (max-width: 600px) {
-        .header-btn, #theme-toggle, #language-btn {
-            margin-bottom: 10px; /* Espacio entre los elementos cuando están en columna */
-        }
+    @media (max-width: 768px) {
 
         #theme-toggle i {
             font-size: 6vw; /* Ajuste del tamaño del icono para pantallas más pequeñas */
-            left: 1vw;
         }
 
-        .language-text {
-            font-size: 3vw; /* Ajuste para mejorar legibilidad en pantallas pequeñas */
+        #language-btn {
+            min-width: 80px;  /* Limitar aún más el ancho mínimo */
+            padding: 8px 16px; /* Acomoda el padding para pantallas muy pequeñas */
+            font-size: 14px; /* Ajuste para mejorar la legibilidad */
+            width: 90%; /* El botón ocupa el 90% del contenedor */
         }
 
         .flag {
-            width: 4vw;
-            height: 3vw;
-            right: 1vw;
-        }
-
-        /* Ajustar el botón de idioma en pantallas pequeñas */
-        #language-btn {
-            min-width: 80px; /* Ajusta el mínimo ancho para que el botón no se quede fuera */
-            margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
-            width: 80%; /* Hace que el botón ocupe el 60% de su contenedor */
-            justify-content: center; /* Centrado horizontal */
-            align-items: center; /* Centrado vertical */
-            font-size: 4vw; /* Ajusta el tamaño del texto dentro del botón */
+            width: 20px; /* Reducir tamaño de la bandera */
+            height: auto;
         }
 
         .header-container {

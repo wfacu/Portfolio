@@ -4,10 +4,10 @@
 <!-- HEAD -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio | Facundo Pall</title>
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
-    <!-- Styles -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/layouts.css">
     <link rel="stylesheet" href="./styles/buttons.css">
@@ -25,6 +25,7 @@
     <!-- HEADER -->
     <header>
         <h1 class="title">FACUNDO PALL</h1>
+
         <!-- Menu -->
         <nav class="nav-bar">
             <a class="header-btn" href="#home" id="home-link">Inicio</a>
@@ -32,22 +33,24 @@
             <a class="header-btn" href="#projects" id="projects-link">Proyectos</a>
             <a class="header-btn" href="#contact" id="contact-link">Contacto</a>
         </nav>
-        <!-- Themes -->
-        <button id="theme-toggle">
-            <i id="icon-sun" class="fa-solid fa-sun"></i>
-            <i id="icon-moon" class="fa-solid fa-moon"></i>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <i id="icon-sun" class="fa-solid fa-sun" aria-hidden="true"></i>
+            <i id="icon-moon" class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
-        <!-- Language -->
+
+        <!-- Language Selector -->
         <div class="language-selector">
-            <button id="language-btn">
-                <img src="./imgs/flag-english.png" class="flag" alt="English Flag">▼
+            <button id="language-btn" aria-label="Change language">
+                <img src="./imgs/flag-english.png" class="flag" alt="English Flag">
             </button>
             <div class="language-options">
                 <div class="language-option" data-lang="en">
                     <img src="./imgs/flag-english.png" class="flag" alt="English Flag"><span class="language-text">EN</span>
                 </div>
                 <div class="language-option" data-lang="es">
-                    <img src="./imgs/flag-español.png" class="flag" alt="Spanish Flag"><span class="language-text">ES</class=>
+                    <img src="./imgs/flag-español.png" class="flag" alt="Spanish Flag"><span class="language-text">ES</span>
                 </div>
             </div>
         </div>
@@ -63,9 +66,11 @@
                         <p class="home-subtitle"></p>
                     </div>
                     <p class="home-description"></p>
-                    <!-- Curriculum CTA -->
+
+                    <!-- Curriculum Button (CTA) -->
                     <a href="./docs/CV.pdf" target="_blank" download class="curriculum-button">
-                        <i class="fa-solid fa-arrow-down-long"></i> <span>CV</span>
+                        <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+                        <span>CV</span>
                     </a>                                  
                 </div>
                 <div class="home-image">
@@ -74,11 +79,18 @@
             </div>
         </div>
     </main>
-    <!-- Social Media -->
+
+    <!-- Social Media Links -->
     <div class="social-media">
-        <a href="https://www.linkedin.com/in/facundopall/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/wfacu" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/facundopall/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/wfacu" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://web.whatsapp.com/send?phone=5491124505089" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
     </div>
 
     <script src="./js/scripts.js" defer></script>
