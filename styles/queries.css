@@ -59,7 +59,7 @@
     }
 
     .social-media a {
-        font-size: 2rem; /* Tamaño de fuente ajustable */
+        font-size: 1.8rem; /* Tamaño de fuente ajustable */
     }
 
     .social-media a:hover {
@@ -138,5 +138,10 @@
             flex-direction: column; /* Cambia a columna cuando la pantalla es muy pequeña */
             align-items: center; /* Alinea todo al centro */
         }
+
+        .social-media a {
+            font-size: 1.5rem; /* Tamaño de fuente ajustable */
+        }
+    
     }
 }
