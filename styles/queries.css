@@ -55,6 +55,7 @@
         position: relative;
         display: flex;
         flex-direction: row; /* Los íconos en fila */
+        left: 0;
     }
 
     .social-media a {
