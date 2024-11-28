@@ -40,12 +40,11 @@
     font-size: 22px;
 }
 
-/* Language button */
 #language-btn {
     cursor: pointer;
     background: transparent;
     border: 3px solid var(--color-fg);
-    padding: 12px 24px;  /* Padding ajustable */
+    padding: 12px 24px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 30px;
@@ -54,12 +53,12 @@
     gap: 12px;
     transition: all 0.5s ease-in-out;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    min-width: 120px; /* Ancho mínimo para evitar que se haga demasiado pequeño */
-    max-width: 200px; /* Limita el tamaño máximo del botón */
-    width: auto; /* Ajusta automáticamente el tamaño según el contenido */
+    min-width: 120px; 
+    max-width: 200px;
+    width: auto;
 }
 
-/* Hover effects */
+/* Efectos de hover */
 #language-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
@@ -90,30 +89,13 @@
     transform: translateY(10px);
 }
 
-/* Opciones de idioma */
-.language-options {
-    display: none;
-    position: absolute;
-    background-color: var(--color-fg);
-    border-radius: 8px;
-    padding: 12px;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 8px;
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.50s ease;
-    transform: translateY(10px);
-}
-
 .language-options.visible {
     display: block;
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Opciones de idioma */
 .language-option {
     padding: 12px 24px;
     cursor: pointer;
@@ -127,10 +109,27 @@
     border-radius: 6px;
 }
 
+/* Efecto hover sobre las opciones */
 .language-option:hover {
-    background-color: var(--color-fg);
-    padding-left: 30px;
+    background-color: var(--color-bg);
+    padding-left: 20px;
 }
+
+/* Cambiar el color del texto cuando se hace hover sobre la opción */
+.language-option:hover .language-text-2 {
+    color: var(--color-fg); /* El texto cambiará a color de primer plano */
+}
+
+/* Para el texto del primer botón (language-text) */
+.language-selector #language-btn .language-text {
+    color: var(--color-bg); /* El texto del botón estará en el color de fondo */
+}
+
+/* Para las opciones de idioma dentro de .language-options (language-text-2) */
+.language-option .language-text-2 {
+    color: var(--color-bg); /* El texto dentro de las opciones estará en el color de primer plano */
+}
+
 /* Curriculum button */
 .curriculum-button {
     margin-top: 50px;
